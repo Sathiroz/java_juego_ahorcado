@@ -1,0 +1,242 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        /*
+         * VARIABLE;
+         * Es un espacio de memoria que tiene n nombre asociado y puede contener un
+         * valor cambiante
+         */
+
+        /*
+         * TIPOS DE VARIABLES
+         * Variables primitivas: Almacenan valores básicos
+         * Variables de referencia: Almacena direcciones de memoria que apuntan a
+         * objetos
+         */
+        // TIPOS DE NUMEROS ENTEROS: byte (-128 al 127), short(-32768 al 32767), int,
+        // long
+        int numero = 5;
+        // TIPO DE DATOS REALES: float (6 decimales) y el double
+
+        double decimales = 5.123456789;
+        // TIPO DE DATO DE CARACTER
+        char letra = 'a';
+        // TIPO DE DATO BOOLEANO
+        boolean v = true;
+        boolean f = false;
+
+        String cadena = "memoriazalo todo alv";
+
+        //ASI SE VEN LA CANTIDAD DE CARACTERES CON LENGHT
+        int longitud = texto.length();
+
+        System.out.println(numero);
+        System.out.println(decimales);
+        System.out.println(letra);
+        System.out.println(v);
+        System.out.println(f);
+        System.out.println(cadena);
+        System.out.println(longitud);
+
+
+        // Diferentes Strings
+        String texto = "Este es un Texto";
+        System.out.println(texto);
+
+        int longitud = texto.length();
+        System.out.println(longitud);
+
+        char caracter = texto.charAt(8);
+        System.out.println(caracter);
+
+
+        String subcadena = texto.substring(5, 11);
+        System.out.println(subcadena);
+
+        //Minusculas
+        String minusculo = texto.toLowerCase();
+        System.out.println(minusculo);
+        //Mayusculas
+        String mayusculo = texto.toUpperCase();
+        System.out.println(mayusculo);
+
+        int indice = texto.indexOf("variable");
+        System.out.println(indice);
+
+        //Para remplazar
+        String remplazo = texto.replace("Texto", "parrafo");
+        System.out.println(remplazo);
+
+        //PARA VER SI CONTIENE ALGO ESPESIFICO
+        boolean contiene = texto.contains("Texto");
+        System.out.println("Tiene la palabra Texto?: "  + contiene);
+
+        String espacios = texto.trim();
+        System.out.println(espacios);
+
+         //OPERADORES: símbolos que sirven para hacer operaciones con variables o valores
+        //ARITMETICOS
+
+        int a = 13;
+        int b = a % 2; 
+
+        // ASIGNACIÓN
+        int c = 5;
+        c=10;
+        c+=15;
+        
+        // System.out.println(b);
+        System.out.println(c);
+
+          //OPERADORES DE COMPARACIÓN
+          int a = 3;
+          int b = 4;
+  
+          boolean esMayor = a > b;
+          boolean esMenor = a < b;
+          boolean esIgual = a == b;
+  
+          System.out.println(esMayor);
+          System.out.println(esMenor);
+          System.out.println(esIgual);
+
+           //OPERADORES DE LÓGICA
+
+      boolean condicion1 = true;
+      boolean condicion2 = false;
+
+      boolean resultadoAND = condicion1 && condicion2; //Ambos deben ser positivo para qe de true
+      boolean resultadoOR = condicion1 || condicion2; //Ambos de los dos debe ser positivo para que de true
+      boolean resultadoNOT = !condicion1; // lo opuesto a lo que tenga asignado previamente
+
+      /*
+       * TABLA DE LA VERDAD
+       * AND            OF              NOT
+       *  | V | F       | V | F        NOT
+       * V| V | F     V | V | V        V | !F
+       * F| F | F     F | V | F        F | !V
+       */
+      System.out.println(resultadoAND);
+      System.out.println(resultadoOR);
+      System.out.println(resultadoNOT);
+       //ESTRUCTURA DE CONTROL CONDICIONAL
+       int edad = 70;
+       if ( edad > 18 && edad <= 60) {
+           System.out.println("Puedes entrar");
+           
+       }else if (edad >60){
+           System.out.println("estas grande");
+       }
+       else if (edad == 18){
+
+           System.out.println("a penas y puedes");
+
+       }else{
+           System.out.println("no tienes permiso");
+       }
+// SWITCH
+
+String bebida = "naranja";
+
+switch (bebida) {
+    case "cafe":
+        System.out.println("Buena cafe");
+
+        break;
+    case "mate":
+        System.out.println("Buena mate");
+
+        break;
+    case "Vino":
+        System.out.println("Buena Vino");
+
+        break;
+    case "gaseosa":
+        System.out.println("Buena gaseosa");
+
+        break;
+    default:
+    System.out.println("disfruta el pedido");
+        break;
+}
+//PEQUEÑO JUEGO CON SWITCH
+Scanner scanner = new Scanner(System.in);
+        System.out.println("Maquina de bebidas");
+        System.out.println("escoje una opcion");
+        System.out.println("1 - cafe");
+        System.out.println("2 - mate");
+        System.out.println("3 - vino");
+        System.out.println("4 - gaseosa");
+
+        int opcion = scanner.nextInt();
+        // SWITCH
+
+
+        switch (opcion) {
+            case 1:
+                System.out.println("Buena cafe");
+
+                break;
+            case 2:
+                System.out.println("Buena mate");
+
+                break;
+            case 3:
+                System.out.println("Buena Vino");
+
+                break;
+            case 4:
+                System.out.println("Buena gaseosa");
+
+                break;
+            default:
+            System.out.println("Opcion no valida fin de programa");
+                break;
+        }if(opcion <= 4)
+        System.out.println("Disfrute de su bebida");
+        scanner.close();
+
+        //ESTRUCTIRA DE CONTROL INTERATIVAAS
+        int i;
+        // for (inicializacioon); condicion; actualizacion;
+        for(  i = 1; i <=3; i++){
+            
+            System.out.println(i);
+        }
+        int contador = 1;
+
+        while (contador <=5) {
+            System.out.println(contador);
+
+            //ACTUALIZACION DE LA VARIABLE
+            contador++;
+            
+        }
+        System.out.println(contador);
+
+           
+      // ARREGLOS: Estructura de datos que tienen valores del mismo tipo bajo un mismo nombre
+      //Estos vgalores se distribuyen secuencialmente en la memoria y se puede acceder a ellos mediante un indice
+      //LOS ARREGLOS SON TAMBIEN LLAMADOS VECTORES O MATRICES
+        // EL INDICE SE EMPIEZA A CONTAR POR 0 Y NO POR 1
+
+      int[] numeros = {10,20,30,40,50};
+
+        
+      int indice = 0;
+
+      for (int numero : numeros) {
+          System.out.println(numero);
+          System.out.println(indice);
+          indice++;
+      }
+
+      for (int index = 0; index < numeros.length; index++) {
+          System.out.println(numeros[index]);
+          System.out.println(index);
+      }
+
+      String palabra = "abecedario";
+      System.out.println(palabra.length());
+    }
+}
